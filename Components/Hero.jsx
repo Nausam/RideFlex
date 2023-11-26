@@ -21,7 +21,7 @@ const Hero = () => {
           >
             <Image
               alt="hero image for smaller devices"
-              src="/assets/images/kawasaky-versys-650.png"
+              src="/assets/images/kawasaki.png"
               width={800}
               height={800}
             />
@@ -58,7 +58,7 @@ const Hero = () => {
           >
             <Image
               alt="hero image"
-              src="/assets/images/kawasaky-versys-650.png"
+              src="/assets/images/kawasaki.png"
               width={1000}
               height={800}
             />
