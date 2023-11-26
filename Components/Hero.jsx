@@ -20,11 +20,10 @@ const Hero = () => {
             className="lg:hidden flex lg:mt-0 mt-10 z-10"
           >
             <Image
-              alt="Hero image"
+              alt="hero image for smaller devices"
               src="/assets/images/kawasaky-versys-650.png"
               width={800}
               height={800}
-              priority
             />
           </MotionDiv>
 
@@ -58,11 +57,10 @@ const Hero = () => {
             className="lg:flex hidden lg:mt-0 mt-14"
           >
             <Image
-              alt="Hero image"
+              alt="hero image"
               src="/assets/images/kawasaky-versys-650.png"
               width={1000}
               height={800}
-              priority
             />
           </MotionDiv>
         </div>
