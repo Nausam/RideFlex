@@ -1,11 +1,11 @@
 const RentalForm = () => {
   return (
-    <div className="max-w-6xl mx-auto my-10 p-6 bg-white dark:bg-transparent rounded-md shadow-2xl  dark:shadow-none shadow-gray-300">
+    <div className="max-w-6xl mx-auto p-6 bg-white dark:bg-transparent rounded-md shadow-2xl  dark:shadow-none shadow-gray-300">
       <h1 className="md:text-4xl text-3xl dark:text-gray-300 text-gray-800 font-semibold mb-4">
         Rent a Motorbike
       </h1>
 
-      <form className="grid grid-cols-2 gap-4">
+      <form className="grid grid-cols-2 gap-2">
         <div className="mb-4">
           <label htmlFor="carType" className="block text-sm text-gray-500 mb-2">
             Select Your Motorbike Type
@@ -17,9 +17,11 @@ const RentalForm = () => {
             required
           >
             <option value="standard">Select your bike</option>
-            <option value="standard">Standard</option>
-            <option value="cruiser">Cruiser</option>
-            <option value="sport">Sport</option>
+            <option value="standard">Kawasaki</option>
+            <option value="cruiser">Ducati</option>
+            <option value="sport">Aprilia</option>
+            <option value="sport">KTM</option>
+            <option value="sport">Suzuki</option>
           </select>
         </div>
 

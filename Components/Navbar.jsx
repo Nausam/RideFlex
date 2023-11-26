@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full fixed top-0 backdrop-blur-lg">
+    <nav className="w-full fixed top-0 backdrop-blur-lg z-10">
       <motion.div
         variants={variants}
         initial={{ opacity: 0, y: -100 }}
@@ -82,7 +82,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-4 items-center">
-          <button className="py-2 px-8 rounded-md font-medium hover:text-green-500 border hover:border-green-500 lg:flex hidden dark:text-gray-300 text-gray-800 tracking-wide transition-all duration-300">
+          <button className="py-2 px-8 rounded-md font-medium hover:text-green-500 border border-green-200 hover:border-green-500 lg:flex hidden dark:text-gray-300 text-gray-800 tracking-wide transition-all duration-300">
             Sign In
           </button>
           <button className="bg-green-500  border-green-500 border-2 hover:border-green-500 text-white py-2 px-5 rounded-sm text-base font-medium tracking-wide shadow-lg shadow-green-300 hover:shadow:xl hover:shadow-green-400 dark:shadow-md dark:shadow-green-800 dark:hover:shadow-green-800 dark:hover:shadow-lg transition-all duration-300">
@@ -99,8 +99,15 @@ const Navbar = () => {
         </div>
 
         {showMenu ? (
-          <div className="absolute top-10 right-0 p-10">
-            <div className="bg-gray-200 dark:bg-gray-800 p-5 rounded-lg flex flex-col items-center shadow-xl">
+          <motion.div
+            variants={variants}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            viewport={{ amount: 0 }}
+            className="absolute top-10 right-0 p-10"
+          >
+            <div className="bg-green-100 dark:bg-gray-800 p-5 rounded-lg flex flex-col items-center shadow-xl">
               <ul className="flex flex-col gap-3">
                 <li>
                   <Link
@@ -143,11 +150,11 @@ const Navbar = () => {
                   </Link>
                 </li>
               </ul>
-              <button className="mt-5 border border-red-500 py-2 px-8 rounded-full text-red-500 font-medium hover:bg-red-500 hover:text-white test tracking-wide transition-all duration-300">
+              <button className="mt-3 py-2 px-8 rounded-md font-medium hover:text-green-500 border border-green-200 hover:border-green-500  dark:text-gray-300 text-gray-800 tracking-wide transition-all duration-300">
                 Sign In
               </button>
             </div>
-          </div>
+          </motion.div>
         ) : (
           <></>
         )}

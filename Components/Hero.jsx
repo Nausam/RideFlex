@@ -8,7 +8,7 @@ const variants = {
 
 const Hero = () => {
   return (
-    <section className="w-full h-screen mt-48">
+    <section id="home" className="w-full h-screen md:mt-48 mt-24">
       <div className="flex max-w-6xl mx-auto m-5 py-2 px-10 items-center p-5">
         <div className="flex lg:flex-row flex-col items-center mx-auto">
           <MotionDiv
@@ -17,7 +17,7 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1.4 }}
             transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
             viewport={{ amount: 0 }}
-            className="lg:hidden flex lg:mt-0 mt-10 z-10"
+            className="lg:hidden flex lg:mt-0 mt-10"
           >
             <Image
               alt="hero image for smaller devices"
@@ -33,7 +33,7 @@ const Hero = () => {
             animate="visible"
             transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
             viewport={{ amount: 0 }}
-            className="lg:text-left text-center mt-10"
+            className="lg:text-left text-center lg:mt-10 mt-20"
           >
             <h1 className="sm:text-5xl text-3xl dark:text-gray-300 text-gray-800 font-bold tracking-wide">
               <span className="text-green-600">Rev Your Adventure!</span>{" "}

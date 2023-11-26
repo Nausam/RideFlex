@@ -14,7 +14,7 @@ const RentalFleet = () => {
   const currentBike = bikeData[selectedBike];
 
   return (
-    <section id="features" className="w-full mt-28">
+    <section id="fleet" className="w-full mt-28">
       <div>
         <div className="flex flex-col justify-center items-center p-5 text-center">
           <h1 className="md:text-4xl text-3xl md:max-w-full max-w-md font-bold dark:text-gray-300 text-gray-800 tracking-wide">
@@ -83,7 +83,7 @@ const RentalFleet = () => {
             </button>
           </div>
 
-          <div className="flex items-center mt-10 md:w-[600px] md:h-[500px] z-10">
+          <div className="flex items-center mt-10 md:w-[600px] md:h-[500px]">
             <Image
               alt="Hero image"
               src={`/assets/images/${selectedBike}.png`}

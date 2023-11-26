@@ -3,7 +3,7 @@ import React from "react";
 
 const WhyUs = () => {
   return (
-    <section className="w-full mt-28">
+    <section id="about" className="w-full mt-28">
       <div className="flex lg:flex-row flex-col max-w-6xl items-center justify-center gap-20 mx-auto">
         <div className="max-w-lg  lg:text-left text-center p-5">
           <h1 className="text-xl font-medium dark:text-gray-300 text-gray-800 ">
