@@ -1,14 +1,24 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { MotionDiv } from "./MotionDiv";
+
+const variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
 
 const Hero = () => {
   return (
-    <section className="w-full">
-      <div className="flex max-w-6xl mx-auto m-5 py-2 px-10 items-center mt-10 p-5">
+    <section className="w-full h-screen mt-48">
+      <div className="flex max-w-6xl mx-auto m-5 py-2 px-10 items-center p-5">
         <div className="flex lg:flex-row flex-col items-center mx-auto">
-          <div className="lg:hidden flex lg:mt-0 mt-10 z-10">
+          <MotionDiv
+            variants={variants}
+            initial={{ opacity: 0, scale: 1.4 }}
+            animate={{ opacity: 1, scale: 1.4 }}
+            transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
+            viewport={{ amount: 0 }}
+            className="lg:hidden flex lg:mt-0 mt-10 z-10"
+          >
             <Image
               alt="Hero image"
               src="/assets/images/kawasaky-versys-650.png"
@@ -16,12 +26,14 @@ const Hero = () => {
               height={800}
               priority
             />
-          </div>
+          </MotionDiv>
 
-          <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+          <MotionDiv
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
+            viewport={{ amount: 0 }}
             className="lg:text-left text-center mt-10"
           >
             <h1 className="sm:text-5xl text-3xl dark:text-gray-300 text-gray-800 font-bold tracking-wide">
@@ -32,15 +44,17 @@ const Hero = () => {
               Ride the Freedom Where Every Journey is an Epic Escape!
             </p>
 
-            <button className="mt-10 bg-green-500  border-green-500 border-2 hover:border-green-500 text-white   py-4 px-10 rounded-md text-base font-medium tracking-wide shadow-lg shadow-green-300 hover:shadow:xl hover:shadow-green-400 dark:shadow-md dark:shadow-green-800 dark:hover:shadow-green-800 dark:hover:shadow-lg transition-all duration-300">
+            <button className="mt-10 bg-green-500  border-green-500 border-2 hover:border-green-500 text-white py-4 px-10 rounded-sm text-base font-medium tracking-wide shadow-lg shadow-green-300 hover:shadow:xl hover:shadow-green-400 dark:shadow-md dark:shadow-green-800 dark:hover:shadow-green-800 dark:hover:shadow-lg transition-all duration-300">
               Book Now
             </button>
-          </motion.div>
+          </MotionDiv>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 2 }}
-            animate={{ opacity: 1, scale: 1.5 }}
-            transition={{ duration: 0.5 }}
+          <MotionDiv
+            variants={variants}
+            initial={{ opacity: 0, scale: 1.4 }}
+            animate={{ opacity: 1, scale: 1.4 }}
+            transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
+            viewport={{ amount: 0 }}
             className="lg:flex hidden lg:mt-0 mt-14"
           >
             <Image
@@ -50,7 +64,7 @@ const Hero = () => {
               height={800}
               priority
             />
-          </motion.div>
+          </MotionDiv>
         </div>
       </div>
     </section>

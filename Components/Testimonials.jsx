@@ -14,8 +14,8 @@ const Testimonials = () => {
         </h3>
       </div>
       <div className="flex flex-col max-w-6xl mx-auto py-2 px-10 items-center p-5">
-        <div className="flex w-full items-center justify-center p-10 gap-5 flex-wrap dark:bg-transparent shadow-2xl shadow-slate-200 rounded-lg">
-          <div className="flex flex-col justify-center shadow-2xl shadow-slate-300 w-[410px] h-[260px] rounded-md p-5 bg-white dark:bg-transparent">
+        <div className="flex w-full items-center justify-center p-10 gap-5 flex-wrap dark:bg-transparent  dark:shadow-none  rounded-lg">
+          <div className="flex flex-col justify-center shadow-2xl shadow-slate-300 dark:shadow-slate-900  w-[410px] h-[260px] rounded-md p-5 bg-white dark:bg-transparent">
             <p className="mt-3 md:text-base text-sm dark:text-gray-400 tracking-wide">
               "I've used several similar products in the past, but none of them
               come close to the level of performance and satisfaction I've
@@ -38,7 +38,7 @@ const Testimonials = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center shadow-2xl shadow-slate-300 w-[410px] h-[260px] rounded-md p-5 bg-white dark:bg-transparent">
+          <div className="flex flex-col justify-center shadow-2xl shadow-slate-300 dark:shadow-slate-900 w-[410px] h-[260px] rounded-md p-5 bg-white dark:bg-transparent">
             <p className="mt-3 md:text-base text-sm dark:text-gray-400 tracking-wide">
               "This motorcycle rental service has transformed my adventures.
               With its seamless, user-friendly interface and top-notch bikes,

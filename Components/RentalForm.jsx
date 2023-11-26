@@ -90,7 +90,7 @@ const RentalForm = () => {
         <div className="col-span-2">
           <button
             type="submit"
-            className="bg-green-500 text-white p-4 rounded-md hover:bg-green-600 w-full transition-all duration-300"
+            className="bg-green-500  border-green-500 border-2 hover:border-green-500 text-white   py-4 px-10 rounded-sm text-base font-medium tracking-wide shadow-lg shadow-green-300 hover:shadow:xl hover:shadow-green-400 dark:shadow-md dark:shadow-green-800 dark:hover:shadow-green-800 dark:hover:shadow-lg transition-all duration-300 w-full"
           >
             Reserve Now
           </button>

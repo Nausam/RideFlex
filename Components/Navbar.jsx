@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -13,9 +14,21 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
-    <nav className="w-full">
-      <div className="flex max-w-6xl mx-auto justify-between m-5 py-2 px-10 items-center">
+    <nav className="w-full fixed top-0 backdrop-blur-lg">
+      <motion.div
+        variants={variants}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ amount: 0 }}
+        className="flex max-w-6xl mx-auto justify-between m-5 py-2 px-10 items-center"
+      >
         <div className="flex items-center gap-3">
           <ThemeButton />
           <div className="flex items-center gap-2">
@@ -69,10 +82,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-4 items-center">
-          <button className="py-2 px-8 rounded-md font-medium hover:text-red-500 border hover:border-red-500 lg:flex hidden dark:text-gray-300 text-gray-800 tracking-wide transition-all duration-300">
+          <button className="py-2 px-8 rounded-md font-medium hover:text-green-500 border hover:border-green-500 lg:flex hidden dark:text-gray-300 text-gray-800 tracking-wide transition-all duration-300">
             Sign In
           </button>
-          <button className="border py-2 px-8 bg-green-500  border-green-500 hover:border-green-500 text-white hover:text-white rounded-md tracking-wide transition-all duration-300">
+          <button className="bg-green-500  border-green-500 border-2 hover:border-green-500 text-white py-2 px-5 rounded-sm text-base font-medium tracking-wide shadow-lg shadow-green-300 hover:shadow:xl hover:shadow-green-400 dark:shadow-md dark:shadow-green-800 dark:hover:shadow-green-800 dark:hover:shadow-lg transition-all duration-300">
             Sign Up
           </button>
           <Image
@@ -138,7 +151,7 @@ const Navbar = () => {
         ) : (
           <></>
         )}
-      </div>
+      </motion.div>
     </nav>
   );
 };
