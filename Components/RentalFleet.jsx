@@ -97,7 +97,7 @@ const RentalFleet = () => {
           ) : (
             <div className="flex items-center mt-10 md:w-[600px] md:h-[500px]">
               <Image
-                alt="Hero image"
+                alt="bike image"
                 src={`/assets/images/${selectedBike}.png`}
                 width={400}
                 height={400}

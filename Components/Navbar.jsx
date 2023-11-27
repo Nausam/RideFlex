@@ -32,12 +32,12 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <ThemeButton />
           <div className="flex items-center gap-2">
-            <h3 className="font-medium text-2xl dark:text-gray-300 text-gray-800   tracking-wide">
+            <h1 className="font-medium text-2xl dark:text-gray-300 text-gray-800   tracking-wide">
               Ride
               <span>
                 <strong className="text-green-600">Flex</strong>
               </span>
-            </h3>
+            </h1>
           </div>
         </div>
         <div className="lg:flex hidden lg:gap-10 gap-3 text-gray-800 dark:text-gray-300 font-semibold">
@@ -89,11 +89,11 @@ const Navbar = () => {
             Sign Up
           </button>
           <Image
-            alt="Hamburger menu"
-            className="z-50 cursor-pointer lg:hidden flex text-green-500"
-            width={30}
-            height={30}
-            src="/assets/icons/hamburger.png"
+            alt="hamburger menu"
+            className="z-50 cursor-pointer lg:hidden flex"
+            width={40}
+            height={40}
+            src="/assets/icons/hamburger.svg"
             onClick={toggleMenu}
           />
         </div>
@@ -102,8 +102,8 @@ const Navbar = () => {
           <motion.div
             variants={variants}
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            animate={{ opacity: 1, y: 30 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
             viewport={{ amount: 0 }}
             className="absolute top-10 right-0 p-10"
           >
