@@ -6,9 +6,16 @@ import { bikeData } from "@/constants/bikeData";
 
 const RentalFleet = () => {
   const [selectedBike, setSelectedBike] = useState("bike_1");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleBikeClick = (bike) => {
+  const handleBikeClick = async (bike) => {
+    setIsLoading(true);
+
+    // Simulate asynchronous operation (replace with actual fetching logic if needed)
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     setSelectedBike(bike);
+    setIsLoading(false);
   };
 
   const currentBike = bikeData[selectedBike];
@@ -83,15 +90,21 @@ const RentalFleet = () => {
             </button>
           </div>
 
-          <div className="flex items-center mt-10 md:w-[600px] md:h-[500px]">
-            <Image
-              alt="Hero image"
-              src={`/assets/images/${selectedBike}.png`}
-              width={400}
-              height={400}
-              className="mx-auto"
-            />
-          </div>
+          {isLoading ? (
+            <div className="flex relative items-center justify-center mt-10 md:w-[600px] md:h-[500px]">
+              <div class="lds-hourglass"></div>
+            </div>
+          ) : (
+            <div className="flex items-center mt-10 md:w-[600px] md:h-[500px]">
+              <Image
+                alt="Hero image"
+                src={`/assets/images/${selectedBike}.png`}
+                width={400}
+                height={400}
+                className="mx-auto"
+              />
+            </div>
+          )}
 
           <div className="flex lg:max-w-sm max-w-6xl flex-col items-center p-5 text-center">
             <h2 className="text-2xl font-bold dark:text-gray-300 text-gray-800">
